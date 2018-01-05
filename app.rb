@@ -22,11 +22,11 @@ class App < Sinatra::Base
     @num = params[:number].to_i
     @phrase = params[:phrase]
     i = 0
-    while i < @num 
+    while i < @num
       @phrase = @phrase + @phrase
       i += 1
     end
-    @phrase
+    "#{@phrase}"
   end
 
 end
