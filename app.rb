@@ -33,13 +33,13 @@ class App < Sinatra::Base
 
   def get "/say/:word1/:word2/:word3/:word4/:word5" do
     result = ""
-    i = 0
-    while i < 5
-      i += 1
-      ph = "word" + i.to_s
-      result += params[ph]
-    end
-    @phrase = result
+    @word1 = params[:word1]
+    @word2 = params[:word2]
+    @word3 = params[:word3]
+    @word4 = params[:word4]
+    @word5 = params[:word5]
+    @phrase = @word1 + @word2 + @word3 + @word4 + @word5
     "#{@phrase}"
   end
+
 end
