@@ -8,7 +8,8 @@ class App < Sinatra::Base
     @name.each do |a|
       r_name = r_name + a
     end
-    "#{r_name}"
+    @name = r_name
+    "#{@name}"
   end
 
 end
