@@ -31,7 +31,7 @@ class App < Sinatra::Base
     "#{@phrase}"
   end
 
-  def get "/say/:word1/:word2/:word3/:word4/:word5" do
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
     result = ""
     @word1 = params[:word1]
     @word2 = params[:word2]
