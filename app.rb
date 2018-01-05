@@ -6,7 +6,7 @@ class App < Sinatra::Base
     @name = params[:name]
     r_name = ""
     @name.each_char do |a|
-      r_name = r_name + a
+      r_name = a + r_name
     end
     @name = r_name
     "#{@name}"
