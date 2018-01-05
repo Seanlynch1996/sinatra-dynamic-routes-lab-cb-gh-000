@@ -12,4 +12,10 @@ class App < Sinatra::Base
     "#{@name}"
   end
 
+  get "/square/:number" do
+    @num = params[:number]
+    @num = @num * @num
+    "#{@num}"
+  end
+
 end
