@@ -31,4 +31,15 @@ class App < Sinatra::Base
     "#{@phrase}"
   end
 
+  def get "/say/:word1/:word2/:word3/:word4/:word5" do
+    result = ""
+    i = 0
+    while i < 5
+      i += 1
+      ph = "word#{i}"
+      result += params[ph]
+    end
+    @phrase = result
+    "#{@phrase}"
+  end
 end
