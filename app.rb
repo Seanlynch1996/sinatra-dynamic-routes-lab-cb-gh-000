@@ -26,6 +26,7 @@ class App < Sinatra::Base
       result += @phrase
       i += 1
     end
+    @phrase = result
     "#{@phrase}"
   end
 
