@@ -36,7 +36,7 @@ class App < Sinatra::Base
     i = 0
     while i < 5
       i += 1
-      ph = "word#{i}"
+      ph = "word" + i.to_s
       result += params[ph]
     end
     @phrase = result
